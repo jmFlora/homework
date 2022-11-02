@@ -23,6 +23,17 @@ function test(){
          console.log("num : "+num); 
          document.write(num);
     }
-   
-
 test();
+
+function func(arr){
+    //배열을 구별 1. 오름차순 2. 0보다 큰 배열만 추가
+    arr.sort((a,b)=>a-b).filter((x)=>x>0);
+    let i=1;
+    while(i<10000000){
+        if(!arr.includes(i))break;
+        i++;
+    }
+    return i;
+}
+
+console.log(func([1,-100,1234,0,5,-200,2,300,100000,-1000,3,20,4]));
