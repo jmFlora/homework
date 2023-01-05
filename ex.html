@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(a){
+            a.sort(function(a,b){
+                return a-b;
+            });
+            console.log(a)
+            let arr = a.filter(x =>x>0)
+            console.log(arr)
+            let num=1;
+            
+            while(num<arr.length){
+                if(!arr.includes(num)){
+                    break;
+                }
+                num++;
+            }
+            console.log(num)
+            return num
+        }    
+        solution([1000,1,-3000,9,0,-10,-1,2,4,10000,-12345])
+    </script>
+    
+</body>
+</html>
