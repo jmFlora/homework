@@ -8,7 +8,8 @@
 </head>
 <body>
     <script>
-        function solution(a){
+           const a = [1000,1,-3000,9,0,-10,-1,2,4,10000,-12345]
+        function solution1(a){
             a.sort(function(a,b){
                 return a-b;
             });
@@ -26,7 +27,25 @@
             console.log(num)
             return num
         }    
-        solution([1000,1,-3000,9,0,-10,-1,2,4,10000,-12345])
+        solution1(a)
+         
+        function solution2(a){
+            let min=1;
+            for(let i=0; i<a.length;i++){
+                if(a[i]>0){
+                    while(min<a.length){
+                        if(a[i]!==min){
+                            console.log(a[i]);
+                           break;
+                        }
+                        min++;
+                    }
+                }console.log(min) 
+            } return min
+        }
+        console.log(solution2(a))
+
+
     </script>
     
 </body>
